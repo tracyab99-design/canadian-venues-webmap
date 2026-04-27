@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canadian Venues Web Map</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; }
-    .box { padding: 1rem; border: 1px solid #ccc; border-radius: 8px; max-width: 700px; }
-  </style>
+  <title>Canadian Venues Webmap</title>
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Leaflet CSS (from the Quick Start) -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
 </head>
+
 <body>
-  <div class="box">
-    <h1>Canadian Venues Web Map</h1>
-    <p>If you can see this page, GitHub Pages is publishing correctly ✅</p>
-    <p>Next step: add a map container and load Leaflet.</p>
-  </div>
+  <header>
+    <strong>Canadian Venues Webmap</strong>
+  </header>
+
+  <!-- Map container (from the Quick Start) -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS (from the Quick Start; after CSS) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <!-- Your map code -->
+  <script src="./js/map.js"></script>
 </body>
-</html>
+</html
