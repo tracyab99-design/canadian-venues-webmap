@@ -9,5 +9,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Optional test marker
-L.marker([51.0447, -114.0719]).addTo(map)
+L.marker([43.6532, -79.3832]).addTo(map)
   .bindPopup('Toronto');
