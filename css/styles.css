@@ -15,4 +15,5 @@ header {
 /* Leaflet needs the map container to have a defined height */
 #map {
   height: calc(100vh - 50px);
-  width: 
+  width: 100%;
+}
