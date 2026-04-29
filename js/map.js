@@ -12,22 +12,10 @@ setTimeout(() => {
   sidebar.open('home');
 }, 500);
 
-// Add search control (UI only for now)
-const searchControl = new L.Control.Search({
-  layer: searchLayer,
-  propertyName: 'name',  // placeholder for future data
-  marker: false,
-  moveToLocation: null,
-  collapsed: false,
-  position: 'topright'
-});
-
-map.addControl(searchControl);
-
 // Add an OpenStreetMap basemap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
-  attribution: '\u00A9 OpenStreetMap contributors'
+  attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
 // LayerGroup that will hold GeoJSON features
@@ -48,7 +36,7 @@ fetch('./data/venues.geojson')
 
         // Add venue to sidebar list
         const listItem = document.createElement('div');
-        listItem.innerHTML = feature.properties.venue_name;
+        listItem.textContent = feature.properties.venue_name;
         listItem.style.cursor = 'pointer';
         listItem.style.marginBottom = '6px';
 
@@ -68,20 +56,3 @@ fetch('./data/venues.geojson')
       venuesLayer.addLayer(layer);
     });
 
-    // ---- SEARCH CONTROL ----
-    const searchControl = new L.Control.Search({
-      layer: venuesLayer,
-      propertyName: 'venue_name',   // ✅ ONLY searches venue name
-      marker: false,
-      moveToLocation: function (latlng, title, map) {
-        map.setView(latlng, 15);
-      },
-      collapsed: false,
-      position: 'topright'
-    });
-
-    map.addControl(searchControl);
-  });
-// Optional test marker
-L.marker([43.6532, -79.3832]).addTo(map)
-  .bindPopup('Toronto');
