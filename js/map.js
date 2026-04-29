@@ -20,7 +20,7 @@ const searchControl = new L.Control.Search({
   propertyName: 'name',  // placeholder for future data
   marker: false,
   moveToLocation: null,
-  collapsed: false
+  collapsed: false,
   position: 'topright'
 });
 
