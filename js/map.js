@@ -4,7 +4,7 @@ const map = L.map('map').setView([43.6532, -79.3832], 8);
 // Create the sidebar control
 const sidebar = L.control.sidebar({
   container: 'sidebar',
-  position: 'left'
+  position: 'right'
 }).addTo(map);
 
 // Open it on load (optional)
@@ -21,6 +21,7 @@ const searchControl = new L.Control.Search({
   marker: false,
   moveToLocation: null,
   collapsed: false
+  position: 'topright'
 });
 
 map.addControl(searchControl);
