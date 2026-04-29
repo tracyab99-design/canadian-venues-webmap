@@ -65,14 +65,6 @@ fetch('./data/venues.geojson')
       }
     });
 
-    // Fit map to data
-    try {
-      var bounds = geojsonLayer.getBounds();
-      if (bounds.isValid()) {
-        map.fitBounds(bounds.pad(0.25));
-      }
-    } catch (e) {}
-
     // Search control (venue_name only)
     var searchControl = new L.Control.Search({
       layer: venuesLayer,
