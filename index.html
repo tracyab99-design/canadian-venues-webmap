@@ -13,12 +13,57 @@
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin="" />
+  
+  <!-- Leaflet Sidebar v2 CSS -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet-sidebar-v2@3.2.3/css/leaflet-sidebar.min.css"
+/>
+
+<!-- Leaflet Search CSS -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet-search@3.0.0/dist/leaflet-search.min.css"
+/>
+  
 </head>
 
 <body>
   <header>
     <strong>Canadian Venues Webmap</strong>
   </header>
+
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+
+        <!-- Tabs -->
+        <div class="leaflet-sidebar-tabs">
+            <ul role="tablist">
+                <li>
+                    <a href="#home" role="tab">
+                        <span>☰</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                <h1 class="leaflet-sidebar-header">
+                    Map Features
+                    <span class="leaflet-sidebar-close"></span>
+                </h1>
+
+                <p>
+                    Feature list and filters will go here.
+                </p>
+
+                <p>
+                    (UI only for now — no data yet)
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 
   <!-- Map container (from the Quick Start) -->
   <div id="map"></div>
@@ -27,6 +72,12 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin=""></script>
+  
+  <!-- Leaflet Sidebar v2 -->
+  <script src="https://unpkg.com/leaflet-sidebar-v2@3.2.3/js/leaflet-sidebar.min.js"></script>
+
+  <!-- Leaflet Search -->
+  <script src="https://unpkg.com/leaflet-search@3.0.0/dist/leaflet-search.min.js"></script>
 
   <!-- Your map code -->
   <script src="./js/map.js"></script>
