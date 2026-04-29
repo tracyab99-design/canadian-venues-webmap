@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "venues",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "venue_name": "Horseshoe Tavern", "address": "370 Queen St W, Toronto, ON M5V 2A2", "description": "Historic Toronto live music venue known for showcasing Canadian and international artists across rock indie folk and alternative genres with nightly performances", "venue_type": "Music Venue", "capacity": 400, "ticket_type": "Ticketed", "music_nights": "Tuesday,Wednesday,Thursday,Friday,Saturday", "seasonal": false, "setting": "Indoor", "latitude": 43.647, "longitude": -79.3931 }, "geometry": { "type": "Point", "coordinates": [ -79.3931, 43.647 ] } }
+]
+}
